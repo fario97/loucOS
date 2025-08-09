@@ -21,3 +21,9 @@ variable "ami_type" {
   type        = string
   default     = "ami-020cba7c55df1f615" # Example: Amazon Linux 2023
 }
+
+variable "root_volume_size_gib" {
+  description = "Tamaño EBS"
+  type        = number
+  default     = 10
+}
