@@ -1,0 +1,7 @@
+# Terraform
+**/.terraform/
+*.tfstate
+*.tfstate.*
+crash.log
+crash.*.log
+# ¡OJO! terraform.lock.hcl SÍ se versiona (no lo ignores)
