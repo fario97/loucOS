@@ -1,0 +1,13 @@
+@startuml
+skinparam rectangle {
+  RoundCorner 15
+  Shadowing false
+}
+rectangle "AWS Account" {
+  rectangle "Default VPC" {
+    node "EC2 t3.micro (AL2023)" as EC2
+    rectangle "SG: SSH from your CIDR" as SG
+    EC2 -[hidden]-> SG
+  }
+}
+@enduml
