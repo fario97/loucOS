@@ -19,11 +19,30 @@ variable "security_group_description" {
 variable "ami_type" {
   description = "The AMI type to use for the EC2 instance"
   type        = string
-  default     = "ami-020cba7c55df1f615" # Example: Amazon Linux 2023
+  default     = "ami-01f23391a59163da9" #~Ubuntu 24.04 EU
 }
 
 variable "root_volume_size_gib" {
   description = "Tamaño EBS"
   type        = number
   default     = 10
+}
+
+variable "allowed_ssh_cidr" {
+  description = "CIDR autorizado para SSH, por ejemplo 203.0.113.4/32"
+  default     = "81.61.49.25/32"
+  type        = string
+}
+
+variable "tags" {
+  description = "Etiquetas adicionales"
+  type        = map(string)
+  default     = {}
+}
+
+
+variable "key_name" {
+  description = "Nombre de la clave SSH para acceder a la instancia"
+  type        = string
+  default     = "my-ec2"
 }
